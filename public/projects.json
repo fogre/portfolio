@@ -1,0 +1,43 @@
+{
+	"projects": [
+		{
+			"name": "Pysäkit-app",
+			"desc": "A Helsinki region public transportation stop timetable searcher.",
+			"url": "https://pysakit.netlify.app/",
+			"source": "https://github.com/fogre/pysakit-app",
+			 "techs": [
+			   "REACT"
+			 ]
+		},
+		{
+			"name": "Fullstack-open",
+			"desc": "Assignments done for the 2020 full-stack open course",
+			"url": "https://github.com/fogre/fullstackopen",
+			 "techs": [
+			   "REACT",
+			   "NODEJS",
+			   "GRAPHQL",
+			   "REDUX"
+			 ]
+		},
+		{
+			"name": "Daintys",
+			"desc": "Website for Daintys with Mycashflow ecommmerce platform",
+			"url": "https://www.daintys.fi",
+			 "techs": [
+			   "HTML",
+			   "CSS",
+			   "JS"
+			 ]
+		},
+		{
+			"name": "Kryptomb",
+			"desc": "Website for Death Doom band Krypts",
+			"url": "https://kryptsdeath.com/",
+			"source": "https://github.com/fogre/Kryptomb",
+			 "techs": [
+			   "REACT"
+			 ]
+		}
+	]
+}
