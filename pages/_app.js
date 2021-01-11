@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import img from '../public/noise3.png'
 
 const GlobalStyle = createGlobalStyle`
   body {

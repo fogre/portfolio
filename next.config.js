@@ -1,7 +1,11 @@
 const withImages = require('next-images')
-module.exports = withImages({
-  esModule: true,
-  webpack(config, options) {
-    return config
-  }
-})
+const withTM = require('next-transpile-modules')(['three'])
+
+module.exports = withTM(
+  withImages({
+    esModule: true,
+    webpack(config, options) {
+      return config
+    }
+  })
+)
