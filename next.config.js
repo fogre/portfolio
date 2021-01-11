@@ -10,7 +10,11 @@ const withTM = require('next-transpile-modules')
 module.exports = withTM(
   withImages({
     esModule: true,
-    webpack(config, options) {
+    webpack: config => {
+      config.module.rules.push({
+        test: /react-spring/,
+        sideEffects: true,
+      })
       return config
     }
   })
