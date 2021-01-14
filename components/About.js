@@ -4,6 +4,10 @@ import { fadeInTransition, fadeOutTransition, flexEnd } from '../styles/mixins'
 
 const FlexWrapper = styled.div`
   ${flexEnd}
+  justify-content: center;
+  max-width: ${props => 
+    props.breakpoint ? '16em' : '850px'
+  };
 `
 const TechContainer = styled.div`
   max-width: 500px;
@@ -12,14 +16,13 @@ const TechImage = styled.img`
   align-self: center;
   width: 2em;
   height: 2em;
-  margin: 0 1em 0;
+  margin: 1em;
 `
 const TextRight = styled.p`
   text-align: right;
 `
-const techs = ['HTML', 'CSS', 'JS', 'REACT', 'NODEJS', 'GRAPHQL', 'REDUX']
 
-const About = () => {
+const About = ({ breakpoint, techs }) => {
 	return (
     <div>
 		  <p>Self learned full stack developer</p>
@@ -28,7 +31,7 @@ const About = () => {
       <br/>
       <TechContainer>
         <p>Working happily with...</p>
-        <FlexWrapper>
+        <FlexWrapper breakpoint={breakpoint}>
           {techs.map(tech =>
             <TechImage src={`./${tech}.png`} alt={tech} key={tech} />
           )}

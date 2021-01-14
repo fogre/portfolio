@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { createGlobalStyle} from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -12,7 +12,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     line-height: 1;
-    -ms-overflow-style: none;
     scrollbar-width: none;
   }
 
@@ -53,9 +52,7 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86" />
       </Head>
       <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <Component {...pageProps} />
     </>
   )
 }

@@ -26,7 +26,6 @@ const TechNames = styled.div`
   font-weight: bold;
   white-space: pre;
   position: absolute;
-  overflow-x: scroll;
 
   ${ProjectContainer}:hover & {
     ${fadeInTransition}

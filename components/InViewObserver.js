@@ -7,7 +7,7 @@ const WithObserver = props => {
   })
 
   useEffect(() => {
-    if (inView) props.setInView(props.scrollID)
+    if (inView) props.changeInView(props.scrollID)
   }, [inView])
 
   return (
@@ -17,19 +17,19 @@ const WithObserver = props => {
   )
 }
 
-//If no navigation, render only children
+//In mobile devices do not track in view
 const InViewObserver = props => {
+
+  if (props.breakpoint) {
+    return <div>{props.children}</div>
+  }
+
   return(
-    <>
-      {props.breakpoint.width < 850
-        ? <div>{props.children}</div>
-        : <WithObserver 
-            scrollID={props.scrollID}
-            setInView={props.setInView}
-            children={props.children}
-          />
-      }
-    </>
+    <WithObserver
+      changeInView={props.changeInView}
+      children={props.children}
+      scrollID={props.scrollID}
+    />
   )
 }
 

@@ -39,5 +39,14 @@
 			   "REACT"
 			 ]
 		}
+	],
+	"techs": [
+		"CSS",
+		"HTML",
+		"JS",
+		"REACT",
+		"NODEJS",
+		"GRAPHQL",
+		"REDUX"
 	]
 }

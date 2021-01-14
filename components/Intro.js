@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { flexCenter, paddingBorder, paddingLeft } from '../styles/mixins'
+import { flexCenter, paddingBorder } from '../styles/mixins'
 
 const IntroContainer = styled.div`
   ${flexCenter};

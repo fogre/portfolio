@@ -17,10 +17,7 @@ export const flexEnd = css`
   align-items: flex-end;
   flex-wrap: wrap;
 `
-export const paddingLeft = css`
-  padding-left: min(3.5vw, 50px);
-`
 export const paddingBorder = css `
-  ${paddingLeft}
+  padding-left: min(3.5vw, 50px);
   border-left: 1px solid grey;
 `

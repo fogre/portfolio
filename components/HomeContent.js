@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 import styled, { keyframes } from 'styled-components'
-import { useWindowSize } from '../hooks/customHooks'
+import { useWindowBreakpoint } from '../hooks/customHooks'
 import Navigation from '../components/Navigation'
 import ParentContainer from '../components/ParentContainer'
 
@@ -24,9 +24,9 @@ const HomeContainer = styled.div`
 
 const HomeContent = props => {
   const [componentInView, setInView] = useState('#Intro')
-  const breakpoint = useWindowSize()
+  const breakpoint = useWindowBreakpoint(850)
 
-  const changeInView = useCallback((id) => {
+  const changeInView = useCallback(id => {
     setInView(id)
   }, [])
 

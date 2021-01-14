@@ -1,24 +1,22 @@
 import { useState, useEffect } from 'react'
 
-export const useWindowSize = () => {
-  const [windowSize, setWindowSize] = useState({
-    width: undefined,
-    height: undefined,
-  })
+export const useWindowBreakpoint = (minWidth) => {
+  const [breakpoint, setBreakpoint] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      })
+      setBreakpoint(
+        window.innerWidth < minWidth
+          ? true
+          : false
+      )
     }
 
     window.addEventListener("resize", handleResize);
     handleResize()
 
     return () => window.removeEventListener("resize", handleResize);
-  }, [])
+  }, [minWidth])
 
-  return windowSize
+  return breakpoint
 }

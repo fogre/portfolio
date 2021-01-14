@@ -29,15 +29,15 @@ const ParentContainer = React.memo(props => {
     <div>
       <InViewObserver
         breakpoint={props.breakpoint}
+        changeInView={props.changeInView}
         scrollID='#Intro'
-        setInView={props.changeInView}
       >
         <Intro />
       </InViewObserver>  
       <InViewObserver
         breakpoint={props.breakpoint}
+        changeInView={props.changeInView}
         scrollID='#Projects'
-        setInView={props.changeInView}
       >
         <ChildWrapper header='Projects'>
           {props.projects.projects.map(project =>
@@ -50,11 +50,14 @@ const ParentContainer = React.memo(props => {
       </InViewObserver>
       <InViewObserver
         breakpoint={props.breakpoint}
+        changeInView={props.changeInView}
         scrollID='#About'
-        setInView={props.changeInView}
       >
         <ChildWrapper header='About'>
-          <About />
+          <About
+            breakpoint={props.breakpoint}
+            techs={props.projects.techs}
+          />
         </ChildWrapper>
       </InViewObserver>
     </div>

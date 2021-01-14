@@ -83,7 +83,7 @@ export default React.memo(function BackgroundCanvas(props) {
     ? window
     : null
   const height = clientWindow && clientWindow.innerHeight * -1
-  const [z] = ScrollEffect([height-200, 30], { domTarget: clientWindow })
+  const [z] = ScrollEffect([height-300, 30], { domTarget: clientWindow })
 
   return (
     <Canvas style={{height: '100vh', width: '100%'}}>

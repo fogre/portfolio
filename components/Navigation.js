@@ -10,7 +10,7 @@ const NavContainer = styled.div`
   writing-mode: vertical-rl;
   text-orientation: sideways;
 `
-const ButtonStyles = css`
+const buttonStyles = css`
   opacity: ${props => props.selected ? 1 : 0.5};
   transition: all .5s ease-in-out;
   margin: 0.7em;
@@ -22,13 +22,12 @@ const ButtonStyles = css`
   }
 `
 const P = styled.p`
-  ${ButtonStyles}
+  ${buttonStyles}
   font-size: 1.2em;
   font-weight: 400;
-
 `
 const Square = styled.div`
-  ${ButtonStyles}
+  ${buttonStyles}
   width: 0.35em;
   height: 0.4em;
   background: white;
@@ -42,7 +41,7 @@ const scrollIntoView = id => {
 
 const Navigation = ({ breakpoint, inView }) => {
   
-  if (breakpoint.width < 850) return null
+  if (breakpoint) return null
 
   return(
   	<NavContainer>
