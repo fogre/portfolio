@@ -1,37 +1,69 @@
 import styled, { css } from 'styled-components'
-import { useWindowSize } from '../hooks/customHooks'
-import { fadeInTransition, flexCenter } from '../styles/mixins'
+import {
+  fadeInTransition,
+  flexCenter,
+  linkStyles,
+  square
+} from '../styles/mixins'
 
-const NavContainer = styled.div`
+const navPosition = css`
   ${flexCenter}
   position: fixed;
   right: 0;
-  margin-top: 0.8em;
   writing-mode: vertical-rl;
   text-orientation: sideways;
 `
-const buttonStyles = css`
-  opacity: ${props => props.selected ? 1 : 0.5};
-  transition: all .5s ease-in-out;
-  margin: 0.7em;
-  padding: 0.3em;
-  cursor: pointer;
-
-  :hover {
-    ${fadeInTransition}
-  }
+const NavTop = styled.div`
+  ${navPosition}
+  top: 0;
+  margin-top: 0.8em;
+`
+const NavBottom = styled.div`
+   ${navPosition}
+  bottom: 0;
+  margin-bottom: 0.5em;
 `
 const P = styled.p`
-  ${buttonStyles}
+  ${linkStyles}
   font-size: 1.2em;
   font-weight: 400;
 `
 const Square = styled.div`
-  ${buttonStyles}
-  width: 0.35em;
-  height: 0.4em;
+  ${linkStyles}
+  ${square}
   background: white;
 `
+const Footer = styled.div`
+  margin-top: 0;
+  padding-bottom: 1.5em;
+`
+const Link = styled.a.attrs(() => ({
+  target: '_blank',
+  rel:'noopener noreferrer'
+}))`
+  ${linkStyles}
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+
+   ${Footer} & {
+    font-size: 1.3em;
+   }
+`
+
+const SocialLinks = () => {
+  return [
+    <Link key={'git'} href={'https://github.com/fogre'}>
+      Github
+    </Link>,
+    <Link key={'linked'} href={'https://linkedin.com/in/antti-johannes-kotiranta'}>
+      Linkedin
+    </Link>,
+    <Link key={'eemil'} href={'mailto:aj.kotiranta@gmail.com'}>
+      Email
+    </Link>,
+  ]
+}
 
 const scrollIntoView = id => {
   document.getElementById(id).scrollIntoView({
@@ -41,18 +73,31 @@ const scrollIntoView = id => {
 
 const Navigation = ({ breakpoint, inView }) => {
   
-  if (breakpoint) return null
-
+  if (breakpoint) {
+    return (
+      <Footer> 
+        <SocialLinks />
+      </Footer>
+    )
+  }
   return(
-  	<NavContainer>
-      <Square onClick={()=> scrollIntoView('#Intro')} selected={inView === '#Intro'} />
-      <P onClick={()=> scrollIntoView('#Projects')} selected={inView === '#Projects'}>
-        Projects
-      </P>
-      <P onClick={()=> scrollIntoView('#About')} selected={inView === '#About'}>
-        About
-      </P>
-    </NavContainer>
+    <>
+    	<NavTop>
+        <Square onClick={()=> scrollIntoView('#Intro')} selected={inView === '#Intro'} />
+        <P onClick={()=> scrollIntoView('#Projects')} selected={inView === '#Projects'}>
+          Projects
+        </P>
+        <P onClick={()=> scrollIntoView('#About')} selected={inView === '#About'}>
+          About
+        </P>
+      </NavTop>
+      <NavBottom>
+        <SocialLinks />
+      </NavBottom>
+      <Footer> 
+        <SocialLinks />
+      </Footer>
+    </>  
   )    
 }
 

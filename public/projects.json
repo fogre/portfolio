@@ -1,8 +1,16 @@
 {
 	"projects": [
 		{
+			"name": "Portfolio",
+			"desc": "This website powered by Next and Threejs",
+			"source": "https://github.com/fogre/portfolio",
+			 "techs": [
+			   "REACT"
+			 ]
+		},
+		{
 			"name": "Pysäkit-app",
-			"desc": "A Helsinki region public transportation stop timetable searcher.",
+			"desc": "A Helsinki region public transportation stop timetable searcher",
 			"url": "https://pysakit.netlify.app/",
 			"source": "https://github.com/fogre/pysakit-app",
 			 "techs": [
@@ -12,22 +20,12 @@
 		{
 			"name": "Fullstack-open",
 			"desc": "Assignments done for the 2020 full-stack open course",
-			"url": "https://github.com/fogre/fullstackopen",
+			"source": "https://github.com/fogre/fullstackopen",
 			 "techs": [
 			   "REACT",
 			   "NODEJS",
 			   "GRAPHQL",
 			   "REDUX"
-			 ]
-		},
-		{
-			"name": "Daintys",
-			"desc": "Website for Daintys with Mycashflow ecommmerce platform",
-			"url": "https://www.daintys.fi",
-			 "techs": [
-			   "HTML",
-			   "CSS",
-			   "JS"
 			 ]
 		},
 		{
@@ -40,13 +38,21 @@
 			 ]
 		}
 	],
-	"techs": [
-		"CSS",
-		"HTML",
-		"JS",
-		"REACT",
-		"NODEJS",
-		"GRAPHQL",
-		"REDUX"
-	]
+	"techs": {
+		"basics": [
+			"HTML",
+			"CSS",
+			"JS"
+		],
+		"front": [		
+			"REACT",
+			"REDUX",
+			"NEXT"
+		],
+		"back": [
+			"NODEJS",
+			"GRAPHQL",
+			"MONGO"
+		]
+	}
 }

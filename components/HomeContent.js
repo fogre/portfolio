@@ -1,25 +1,13 @@
 import { useState, useCallback } from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { useWindowBreakpoint } from '../hooks/customHooks'
 import Navigation from '../components/Navigation'
-import ParentContainer from '../components/ParentContainer'
+import ContentContainer from '../components/ContentContainer'
+import { fadeInAnimation } from '../styles/animations'
 
-const fadeInAnimation = keyframes`
-  0% {
-    display: none;
-    opacity: 0;
-  }
-  0.01% {
-    display: block;
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-`
 const HomeContainer = styled.div`
   animation: ${fadeInAnimation} 0.7s linear 1;
-  padding-right: 1em;
+  padding-right: min(4vw, 50px);
 `
 
 const HomeContent = props => {
@@ -35,12 +23,12 @@ const HomeContent = props => {
   return (
     <>
       <HomeContainer>
-        <Navigation breakpoint={breakpoint} inView={componentInView}/>
-        <ParentContainer
+        <ContentContainer
           breakpoint={breakpoint}
           changeInView={changeInView}
           projects={props.projects}
         />
+        <Navigation breakpoint={breakpoint} inView={componentInView}/>  
       </HomeContainer>
     </>
   )

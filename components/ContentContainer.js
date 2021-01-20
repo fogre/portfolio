@@ -4,10 +4,21 @@ import Intro from '../components/Intro'
 import InViewObserver from '../components/InViewObserver'
 import Navigation from '../components/Navigation'
 import Project from '../components/Project'
-import { paddingBorder } from '../styles/mixins'
+import { paddingBorder } from '../styles/mixins'
 
 const Wrapper = styled.div`
-  margin-bottom: 20em;
+  margin-bottom: ${props => props.margin};
+
+  h2 {
+    margin: 0;
+    padding-left: 0.3em;
+    border-width: 1px;
+    border-left-style: solid;
+    border-image: linear-gradient(
+        rgba(0, 0, 0, 0),
+        ${props => props.theme.border}
+      ) 1;
+  }
 `
 const InnerWrapper = styled.div`
   ${paddingBorder}
@@ -15,7 +26,7 @@ const InnerWrapper = styled.div`
 
 const ChildWrapper = props => {
   return (
-    <Wrapper>
+    <Wrapper margin={props.margin}>
       <h2>{props.header}</h2>
       <InnerWrapper>
         {props.children}
@@ -24,7 +35,7 @@ const ChildWrapper = props => {
   )
 }
 
-const ParentContainer = React.memo(props => {
+const ContentContainer = React.memo(props => {
   return(
     <div>
       <InViewObserver
@@ -39,11 +50,12 @@ const ParentContainer = React.memo(props => {
         changeInView={props.changeInView}
         scrollID='#Projects'
       >
-        <ChildWrapper header='Projects'>
-          {props.projects.projects.map(project =>
+        <ChildWrapper margin={'20em'} header='Projects'>
+          {props.projects.projects.map((project, i) =>
             <Project
               key={project.name}
               project={project}
+              i={i}
             />
           )}
         </ChildWrapper>
@@ -53,15 +65,12 @@ const ParentContainer = React.memo(props => {
         changeInView={props.changeInView}
         scrollID='#About'
       >
-        <ChildWrapper header='About'>
-          <About
-            breakpoint={props.breakpoint}
-            techs={props.projects.techs}
-          />
+        <ChildWrapper margin={'5em'}header="Hi, I'm Antti.">
+          <About techs={props.projects.techs} />
         </ChildWrapper>
       </InViewObserver>
     </div>
   )
 })
 
-export default ParentContainer
+export default ContentContainer

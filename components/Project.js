@@ -1,9 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import { fadeInTransition, fadeOutTransition, flexEnd } from '../styles/mixins'
+import {
+  fadeInTransition,
+  fadeOutTransition,
+  flexEnd,
+  techText,
+  square
+} from '../styles/mixins'
 
 const ProjectContainer = styled.div`
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 `
 const FlexWrapper = styled.div`
   ${flexEnd}
@@ -20,16 +26,18 @@ const TechImage = styled.img`
 `
 const TechNames = styled.div`
   ${fadeOutTransition}
-  color: grey;
+  ${techText}
+  color: ${props => props.theme.grey};
   margin: 1.4em 0.9em 0;
-  font-size: 1em;
-  font-weight: bold;
   white-space: pre;
-  position: absolute;
 
   ${ProjectContainer}:hover & {
     ${fadeInTransition}
   }
+`
+const Square = styled.div`
+  ${square}
+  margin: 0 0.2em 0.2em 0;
 `
 const LinkButton = styled.a.attrs(() => ({
   target: '_blank',
@@ -37,21 +45,26 @@ const LinkButton = styled.a.attrs(() => ({
 }))`
   padding: 0.5em 0.7em;
   margin-right: 1.5em;
-  border: white 2px solid;
-  font-weight: 800;
+  border: ${props => props.theme.grey} 0.15em solid;
+  font-weight: bold;
   text-decoration: none;
   color: white;
 
   :hover {
-    background: linear-gradient(107deg, rgba(1,0,20,1) 0%, rgba(147,52,52,1) 20%);
+    border-color: white;
   }
 `
-const Project = ({ project }) => {
+const Project = ({ project, i }) => {
   const techTexts = project.techs.map(tech => tech+'   ')
 
 	return (
     <ProjectContainer>
       <FlexWrapper>
+        <Square
+          height={'0.4em'}
+          width={'0.6em'}
+          i={i}
+        />
   		  <h3>{project.name}</h3>
         <span>
           <TechNames>{techTexts}</TechNames>
@@ -62,7 +75,9 @@ const Project = ({ project }) => {
       </FlexWrapper>  
       <p>{project.desc}</p>
       <FlexWrapper>
-        <LinkButton href={project.url}>VIEW</LinkButton>
+        {project.url
+          && <LinkButton href={project.url}>VIEW</LinkButton>
+        }
         {project.source
           && <LinkButton href={project.source}>SOURCE</LinkButton>
         }

@@ -2,6 +2,7 @@ const withImages = require('next-images')
 const withTM = require('next-transpile-modules')
   ([
     'three',
+    '@react-spring/core',
     '@react-spring/three',
     "react-use-gesture",
     'react-three-fiber'

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-export const useWindowBreakpoint = (minWidth) => {
+export const useWindowBreakpoint = minWidth => {
   const [breakpoint, setBreakpoint] = useState(false)
 
   useEffect(() => {

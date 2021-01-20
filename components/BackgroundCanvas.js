@@ -26,7 +26,7 @@ function Content() {
 
   return (
     <group ref={ref}>
-      <Square position={[0, 0, -5]} />
+      <Square position={[0, 0, -7]} />
       <Square position={[0, 0, 0]} />
       <Square position={[0, 0, 7]} />
       <Square position={[0, 0, 14]} />
@@ -68,12 +68,11 @@ function CameraLight() {
 
   return (
     <rectAreaLight
-      width={6}
+      width={5}
       height={5}
-      color={"#140069"}
+      color={"#000069"}
       intensity={670}
       position={camera.position}
-      lookAt={[0, 0, 0]}
     />
   )
 }
@@ -82,8 +81,8 @@ export default React.memo(function BackgroundCanvas(props) {
   const clientWindow = typeof window !== 'undefined'
     ? window
     : null
-  const height = clientWindow && clientWindow.innerHeight * -1
-  const [z] = ScrollEffect([height-300, 30], { domTarget: clientWindow })
+  const height = clientWindow && clientWindow.innerHeight * -2
+  const [z] = ScrollEffect([height, 30], { domTarget: clientWindow })
 
   return (
     <Canvas style={{height: '100vh', width: '100%'}}>
