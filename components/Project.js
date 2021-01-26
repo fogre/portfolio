@@ -13,6 +13,7 @@ const ProjectContainer = styled.div`
 `
 const FlexWrapper = styled.div`
   ${flexEnd}
+  flex-wrap: wrap;
 `
 const TechImage = styled.img`
   ${fadeInTransition}
@@ -62,7 +63,7 @@ const Project = ({ project, i }) => {
       <FlexWrapper>
         <Square
           height={'0.4em'}
-          width={'0.6em'}
+          width={'0.7em'}
           i={i}
         />
   		  <h3>{project.name}</h3>

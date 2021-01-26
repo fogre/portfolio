@@ -81,7 +81,7 @@ export default React.memo(function BackgroundCanvas(props) {
   const clientWindow = typeof window !== 'undefined'
     ? window
     : null
-  const height = clientWindow && clientWindow.innerHeight * -2
+  const height = clientWindow && clientWindow.innerHeight * -3
   const [z] = ScrollEffect([height, 30], { domTarget: clientWindow })
 
   return (

@@ -12,7 +12,7 @@ const HomeContainer = styled.div`
 
 const HomeContent = props => {
   const [componentInView, setInView] = useState('#Intro')
-  const breakpoint = useWindowBreakpoint(850)
+  const breakpoint = useWindowBreakpoint(850, 580)
 
   const changeInView = useCallback(id => {
     setInView(id)

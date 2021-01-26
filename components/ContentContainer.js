@@ -8,17 +8,6 @@ import { paddingBorder } from '../styles/mixins'
 
 const Wrapper = styled.div`
   margin-bottom: ${props => props.margin};
-
-  h2 {
-    margin: 0;
-    padding-left: 0.3em;
-    border-width: 1px;
-    border-left-style: solid;
-    border-image: linear-gradient(
-        rgba(0, 0, 0, 0),
-        ${props => props.theme.border}
-      ) 1;
-  }
 `
 const InnerWrapper = styled.div`
   ${paddingBorder}
@@ -65,7 +54,7 @@ const ContentContainer = React.memo(props => {
         changeInView={props.changeInView}
         scrollID='#About'
       >
-        <ChildWrapper margin={'5em'}header="Hi, I'm Antti.">
+        <ChildWrapper margin={'8em'}header="Hi, I'm Antti">
           <About techs={props.projects.techs} />
         </ChildWrapper>
       </InViewObserver>

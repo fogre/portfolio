@@ -2,11 +2,9 @@ import { useState, useCallback } from 'react'
 import styled from 'styled-components'
 import Background from '../components/BackgroundCanvas'
 import HomeContent from '../components/HomeContent'
-import img from '../public/noise3.png'
 
 const BackgroundWrapper = styled.div`
-  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%),
-    repeat url(${img});
+  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
   position: fixed;
   width: 100%;
   height: 100%;

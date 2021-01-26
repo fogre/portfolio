@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react'
 
-export const useWindowBreakpoint = minWidth => {
+export const useWindowBreakpoint = (minWidth, minHeigth) => {
   const [breakpoint, setBreakpoint] = useState(false)
 
   useEffect(() => {
+    
     const handleResize = () => {
-      setBreakpoint(
-        window.innerWidth < minWidth
-          ? true
-          : false
-      )
+      if (window.innerWidth < minWidth || window.innerHeight < minHeigth ) {
+        setBreakpoint(true)
+      } else {
+        setBreakpoint(false)
+      }
     }
 
     window.addEventListener("resize", handleResize);

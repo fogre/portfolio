@@ -36,12 +36,8 @@ export const square = css`
   background: ${props => 
     colorPicker(props.theme.gradients, props.i)
   };
-  width: ${props => 
-    props.width ? props.width : '0.3em'
-  };
-  height: ${props => 
-    props.height ? props.height : '0.4em'
-  };
+  width: ${props => props.width};
+  height: ${props => props.height};
 `
 export const techText = css`
   font-size: 1em;

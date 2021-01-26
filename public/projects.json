@@ -5,12 +5,13 @@
 			"desc": "This website powered by Next and Threejs",
 			"source": "https://github.com/fogre/portfolio",
 			 "techs": [
-			   "REACT"
+			   "REACT",
+			   "NEXT"
 			 ]
 		},
 		{
 			"name": "Pysäkit-app",
-			"desc": "A Helsinki region public transportation stop timetable searcher",
+			"desc": "Helsinki region public transportation timetable searcher",
 			"url": "https://pysakit.netlify.app/",
 			"source": "https://github.com/fogre/pysakit-app",
 			 "techs": [
@@ -23,7 +24,7 @@
 			"source": "https://github.com/fogre/fullstackopen",
 			 "techs": [
 			   "REACT",
-			   "NODEJS",
+			   "NODE",
 			   "GRAPHQL",
 			   "REDUX"
 			 ]
@@ -50,9 +51,9 @@
 			"NEXT"
 		],
 		"back": [
-			"NODEJS",
+			"NODE",
 			"GRAPHQL",
-			"MONGO"
+			"MONGODB"
 		]
 	}
 }
