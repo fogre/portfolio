@@ -66,7 +66,7 @@ const Techs = ({ techs, i }) => {
             {tech}
           </TechP>
           <TechImage 
-            src={`./${tech}.png`}
+            src={`./img/${tech}.png`}
             alt={tech}
             delay={delay}
           />

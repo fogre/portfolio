@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { Canvas, useFrame, useThree } from 'react-three-fiber'
 import { useGesture } from 'react-use-gesture'
 import { a } from '@react-spring/three'

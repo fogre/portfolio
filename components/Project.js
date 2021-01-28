@@ -63,14 +63,14 @@ const Project = ({ project, i }) => {
       <FlexWrapper>
         <Square
           height={'0.4em'}
-          width={'0.7em'}
+          width={'0.6em'}
           i={i}
         />
   		  <h3>{project.name}</h3>
         <span>
           <TechNames>{techTexts}</TechNames>
           {project.techs.map(tech =>
-            <TechImage src={`./${tech}.png`} alt={tech} key={tech}/>
+            <TechImage src={`./img/${tech}.png`} alt={tech} key={tech}/>
           )}
         </span>
       </FlexWrapper>  

@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import About from '../components/About'
 import Intro from '../components/Intro'
