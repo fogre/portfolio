@@ -40,7 +40,7 @@ export const fadeOutThenIn = keyframes`
   50% {
     opacity: 0;
   }
-  93% {
+  95% {
     opacity:0;
   }
   100% {

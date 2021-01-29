@@ -60,13 +60,12 @@ const TechP = styled.p`
 `
 
 const Techs = ({ techs, i }) => {
-  const length = (6-i).toString()+'em'
-  const delay = (i*80).toString()+'ms'
+  const delay = i.toString()+'s'
 
   return (
     <FlexWrapper>
       <Square
-        width={length}
+        width={(6-i).toString()+'em'}
         height={'0.5em'}
         i={i}
       />
