@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import { memo, useRef, useEffect } from 'react'
 import { Canvas, useFrame, useThree } from 'react-three-fiber'
 import { useGesture } from 'react-use-gesture'
 import { a } from '@react-spring/three'
@@ -77,10 +77,11 @@ function CameraLight() {
   )
 }
 
-export default React.memo(function BackgroundCanvas(props) {
+export default memo(function BackgroundCanvas(props) {
   const clientWindow = typeof window !== 'undefined'
     ? window
     : null
+    
   const height = clientWindow && clientWindow.innerHeight * -3
   const [z] = ScrollEffect([height, 30], { domTarget: clientWindow })
 

@@ -30,13 +30,13 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <link rel="stylesheet" href="/fonts/fonts.css" />
           <link rel="icon" type="image/png" sizes="16x16" href="/icon-16.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png" />
-          <link rel="icon" href="/favicon.ico" />
           <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
+          <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
           <Main />

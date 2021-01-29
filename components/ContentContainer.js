@@ -1,4 +1,4 @@
-import React from 'react'
+import { memo } from 'react'
 import styled from 'styled-components'
 import About from '../components/About'
 import Intro from '../components/Intro'
@@ -25,7 +25,7 @@ const ChildWrapper = props => {
   )
 }
 
-const ContentContainer = React.memo(props => {
+const ContentContainer = memo(props => {
   return(
     <div>
       <InViewObserver

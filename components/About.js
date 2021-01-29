@@ -39,6 +39,11 @@ const TechImage = styled.img`
   width: 1.85em;
   height: 1.85em;
   margin: 1.15em;
+
+  @media only screen and (max-width: 330px) {
+    opacity: 1;
+    animation-play-state: paused;
+  }
 `
 const TechP = styled.p`
   ${techText}
@@ -47,6 +52,11 @@ const TechP = styled.p`
   color: white;
   opacity: 1;
   margin: 1.5em;
+
+  @media only screen and (max-width: 330px) {
+    opacity: 0;
+    animation-play-state: paused;
+  }
 `
 
 const Techs = ({ techs, i }) => {

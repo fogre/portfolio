@@ -1,17 +1,19 @@
-import { createGlobalStyle, css } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   body {
     background: #1a2135;
-    color: #ffffffff;
+    box-sizing: border-box;
+    position: relative;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    box-sizing: border-box;
+    scrollbar-width: none;
+
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     line-height: 1;
-    scrollbar-width: none;
+    color: #ffffffff;
     text-shadow: -0.5px 0.5px 0 #1a2135,
       0.5px 0.5px 0 #1a2135,
       0.5px -0.5px 0 #1a2135,
@@ -19,9 +21,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   p {
-    font-size: 1.36em;
-    font-weight: 300;
-    color: white;
+    font-size: 1.35em;
   }
 
   h2 {
