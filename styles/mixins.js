@@ -33,9 +33,7 @@ export const paddingBorder = css `
   border-left: 1px solid ${props => props.theme.border};
 `
 export const square = css`
-  background: ${props => 
-    colorPicker(props.theme.gradients, props.i)
-  };
+  background: ${props => colorPicker(props.theme.gradients, props.i) };
   width: ${props => props.width};
   height: ${props => props.height};
 `

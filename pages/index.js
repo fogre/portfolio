@@ -11,7 +11,7 @@ const BackgroundWrapper = styled.div`
   z-index: -1;
 `
 
-const Home = ({ projects }) => {
+const Home = ({ projects }) => {
   const [loaded, setAnimationLoaded] = useState(false)
 
   const setLoaded = useCallback(() => {
@@ -30,7 +30,7 @@ const Home = ({ projects }) => {
 
 export async function getStaticProps() {
   const data = await import('../public/projects.json')
-  const projects = JSON.parse(JSON.stringify(data)) 
+  const projects = JSON.parse(JSON.stringify(data))
 
   return {
     props: {

@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback } from 'react'
 import styled from 'styled-components'
 import { useWindowBreakpoint } from '../hooks/customHooks'
 import Navigation from '../components/Navigation'
@@ -28,7 +28,7 @@ const HomeContent = props => {
           changeInView={changeInView}
           projects={props.projects}
         />
-        <Navigation breakpoint={breakpoint} inView={componentInView}/>  
+        <Navigation breakpoint={breakpoint} inView={componentInView}/>
       </HomeContainer>
     </>
   )

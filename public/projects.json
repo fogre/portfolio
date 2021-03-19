@@ -10,7 +10,16 @@
 			 ]
 		},
 		{
-			"name": "Pysäkit-app",
+			"name": "Auth-App",
+			"desc": "User authentication API done for devChallenges",
+			"url": "https://authappdevchallenge.herokuapp.com/",
+			"source": "https://github.com/fogre/auth-app",
+			"techs": [
+				"NODE", "REACT"
+			]
+		},
+		{
+			"name": "Pysäkit",
 			"desc": "Helsinki region public transportation timetable searcher",
 			"url": "https://pysakit.netlify.app/",
 			"source": "https://github.com/fogre/pysakit-app",
@@ -27,15 +36,6 @@
 			   "NODE",
 			   "GRAPHQL",
 			   "REDUX"
-			 ]
-		},
-		{
-			"name": "Kryptomb",
-			"desc": "Website for Death Doom band Krypts",
-			"url": "https://kryptsdeath.com/",
-			"source": "https://github.com/fogre/Kryptomb",
-			 "techs": [
-			   "REACT"
 			 ]
 		}
 	],

@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
+    "lint": "eslint './'",
     "build": "next build",
     "start": "next start"
   },
@@ -18,10 +19,12 @@
     "react-three-fiber": "^5.3.18",
     "react-use-gesture": "^8.0.1",
     "styled-components": "^5.2.1",
-    "three": "^0.124.0"
+    "three": "^0.126.1"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.12.0",
+    "eslint": "^7.19.0",
+    "eslint-plugin-react": "^7.22.0",
     "next-secure-headers": "^2.1.0",
     "next-transpile-modules": "^6.0.0"
   },

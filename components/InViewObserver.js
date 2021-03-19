@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 const WithObserver = props => {
- const [ref, inView] = useInView({
+  const [ref, inView] = useInView({
     threshold: 0.7,
   })
 
@@ -25,11 +25,9 @@ const InViewObserver = props => {
   }
 
   return(
-    <WithObserver
-      changeInView={props.changeInView}
-      children={props.children}
-      scrollID={props.scrollID}
-    />
+    <WithObserver changeInView={props.changeInView} scrollID={props.scrollID}>
+      {props.children}
+    </WithObserver>
   )
 }
 

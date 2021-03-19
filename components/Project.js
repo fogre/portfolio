@@ -58,7 +58,7 @@ const LinkButton = styled.a.attrs(() => ({
 const Project = ({ project, i }) => {
   const techTexts = project.techs.map(tech => tech+'   ')
 
-	return (
+  return (
     <ProjectContainer>
       <FlexWrapper>
         <Square
@@ -66,14 +66,14 @@ const Project = ({ project, i }) => {
           width={'0.6em'}
           i={i}
         />
-  		  <h3>{project.name}</h3>
+        <h3>{project.name}</h3>
         <span>
           <TechNames>{techTexts}</TechNames>
           {project.techs.map(tech =>
             <TechImage src={`./img/${tech}.png`} alt={tech} key={tech}/>
           )}
         </span>
-      </FlexWrapper>  
+      </FlexWrapper>
       <p>{project.desc}</p>
       <FlexWrapper>
         {project.url
@@ -82,9 +82,9 @@ const Project = ({ project, i }) => {
         {project.source
           && <LinkButton href={project.source}>SOURCE</LinkButton>
         }
-      </FlexWrapper>  
+      </FlexWrapper>
     </ProjectContainer>
-	)
+  )
 }
 
 export default Project

@@ -66,7 +66,7 @@ const scrollIntoView = id => {
 }
 
 const Navigation = ({ breakpoint, inView }) => {
-  
+
   if (breakpoint) {
     return (
       <Footer>
@@ -77,17 +77,17 @@ const Navigation = ({ breakpoint, inView }) => {
 
   return(
     <>
-    	<NavTop>
+      <NavTop>
         <Square
           width={'0.35em'}
           height={'0.35em'}
-          onClick={()=> scrollIntoView('#Intro')}
+          onClick={() => scrollIntoView('#Intro')}
           selected={inView === '#Intro'}
         />
-        <P onClick={()=> scrollIntoView('#Projects')} selected={inView === '#Projects'}>
+        <P onClick={() => scrollIntoView('#Projects')} selected={inView === '#Projects'}>
           Projects
         </P>
-        <P onClick={()=> scrollIntoView('#About')} selected={inView === '#About'}>
+        <P onClick={() => scrollIntoView('#About')} selected={inView === '#About'}>
           About
         </P>
       </NavTop>

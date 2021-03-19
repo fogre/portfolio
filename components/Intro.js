@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { flexCenter, paddingBorder } from '../styles/mixins'
+import { flexCenter, paddingBorder } from '../styles/mixins'
 import logo from '../public/img/logo.svg'
 
 const IntroContainer = styled.div`

@@ -1,6 +1,5 @@
 import { memo, useRef, useEffect } from 'react'
 import { Canvas, useFrame, useThree } from 'react-three-fiber'
-import { useGesture } from 'react-use-gesture'
 import { a } from '@react-spring/three'
 import ScrollEffect from '../utils/ScrollEffect'
 
@@ -8,7 +7,7 @@ function Square(props) {
   return (
     <mesh {...props} scale={[0.5, 0.5, 0.5]}>
       <ringBufferGeometry attach="geometry" args={[8.9, 9, 4]} />
-      <meshStandardMaterial 
+      <meshStandardMaterial
         attach="material"
         color="#7ea7a8"
         metalness={0}
@@ -64,13 +63,13 @@ function Camera(props) {
 }
 
 function CameraLight() {
-  const { camera } = useThree()
+  const { camera } = useThree()
 
   return (
     <rectAreaLight
       width={5}
       height={5}
-      color={"#000069"}
+      color={'#000069'}
       intensity={670}
       position={camera.position}
     />
@@ -81,12 +80,12 @@ export default memo(function BackgroundCanvas(props) {
   const clientWindow = typeof window !== 'undefined'
     ? window
     : null
-    
+
   const height = clientWindow && clientWindow.innerHeight * -3
   const [z] = ScrollEffect([height, 30], { domTarget: clientWindow })
 
   return (
-    <Canvas style={{height: '100vh', width: '100%'}}>
+    <Canvas style={{ height: '100vh', width: '100%' }}>
       <Camera position={[0.5, -0.5, 0]} setLoaded={props.setLoaded}>
         <CameraLight />
       </Camera>

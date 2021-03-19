@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import About from '../components/About'
 import Intro from '../components/Intro'
 import InViewObserver from '../components/InViewObserver'
-import Navigation from '../components/Navigation'
 import Project from '../components/Project'
 import { paddingBorder } from '../styles/mixins'
 
@@ -25,7 +24,7 @@ const ChildWrapper = props => {
   )
 }
 
-const ContentContainer = memo(props => {
+const ContentContainer = memo(props => { //eslint-disable-line react/display-name
   return(
     <div>
       <InViewObserver
@@ -34,7 +33,7 @@ const ContentContainer = memo(props => {
         scrollID='#Intro'
       >
         <Intro />
-      </InViewObserver>  
+      </InViewObserver>
       <InViewObserver
         breakpoint={props.breakpoint}
         changeInView={props.changeInView}

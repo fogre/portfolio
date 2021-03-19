@@ -60,7 +60,7 @@ const TechP = styled.p`
 `
 
 const Techs = ({ techs, i }) => {
-  const delay = i.toString()+'s'
+  const delay = (i*100).toString()+'ms'
 
   return (
     <FlexWrapper>
@@ -69,37 +69,38 @@ const Techs = ({ techs, i }) => {
         height={'0.5em'}
         i={i}
       />
-      {techs.map((tech,i) =>
+      {techs.map(tech =>
         <TechWrapper key={tech}>
           <TechP delay={delay}>
             {tech}
           </TechP>
-          <TechImage 
+          <TechImage
             src={`./img/${tech}.png`}
             alt={tech}
             delay={delay}
           />
-        </TechWrapper> 
+        </TechWrapper>
       )}
     </FlexWrapper>
   )
 }
 
-const About = ({ techs }) => {	return (
+const About = ({ techs }) => {
+  return (
     <AboutContainer>
-		  <Bold>
-        I'm a self learned full-stack developer.
+      <Bold>
+        I&apos;m a self learned full-stack developer.
       </Bold>
       <Small>
         Student of computer science in the University of Helsinki.
-      </Small>  
+      </Small>
       <Small>
          Interested in creating functional and engaging web projects.
       </Small>
       <Small>
-        Currently building apartment hotel business in Helsinki 
+        Currently building apartment hotel business in Helsinki
         and spend my free time with music.
-      </Small> 
+      </Small>
       <br/>
       <div>
         <h4>Working happily with...</h4>

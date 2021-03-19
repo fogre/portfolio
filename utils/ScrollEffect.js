@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react'
+import { useCallback } from 'react'
 import { useSpring, config } from '@react-spring/core'
 import { useGesture } from 'react-use-gesture'
 import clamp from 'lodash/clamp'

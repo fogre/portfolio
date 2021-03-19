@@ -4,7 +4,6 @@ export const useWindowBreakpoint = (minWidth, minHeigth) => {
   const [breakpoint, setBreakpoint] = useState(false)
 
   useEffect(() => {
-    
     const handleResize = () => {
       if (window.innerWidth < minWidth || window.innerHeight < minHeigth ) {
         setBreakpoint(true)
@@ -13,10 +12,10 @@ export const useWindowBreakpoint = (minWidth, minHeigth) => {
       }
     }
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize)
     handleResize()
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => window.removeEventListener('resize', handleResize)
   }, [minWidth])
 
   return breakpoint
