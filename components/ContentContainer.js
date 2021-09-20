@@ -54,8 +54,8 @@ const ContentContainer = memo(props => { //eslint-disable-line react/display-nam
         changeInView={props.changeInView}
         scrollID='#About'
       >
-        <ChildWrapper margin={'8em'}header="Hi, I'm Antti">
-          <About techs={props.projects.techs} />
+        <ChildWrapper margin={'8em'} header="Hi, I'm Antti">
+          <About breakpoint={props.breakpoint} techs={props.projects.techs} />
         </ChildWrapper>
       </InViewObserver>
     </div>

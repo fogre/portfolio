@@ -10,6 +10,17 @@
 			 ]
 		},
 		{
+			"name": "TypeScript",
+			"desc": "Full-stack open TypeScript exercises",
+			"url": "https://patientortypesciptapp.netlify.app/",
+			"source": "https://github.com/fogre/TypeScript",
+			 "techs": [
+			   "TS",
+			   "REACT",
+			   "NODE"
+			 ]
+		},
+		{
 			"name": "Auth-App",
 			"desc": "User authentication API done for devChallenges",
 			"url": "https://authappdevchallenge.herokuapp.com/",
@@ -43,7 +54,8 @@
 		"basics": [
 			"HTML",
 			"CSS",
-			"JS"
+			"JS",
+			"TS"
 		],
 		"front": [		
 			"REACT",
