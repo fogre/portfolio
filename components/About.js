@@ -30,15 +30,20 @@ const Small = styled.p`
 `
 const TechGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(${props => props.columns}, 6.5em);
-  margin: 1.5em;
+  grid-template-columns: repeat(${props => props.columns}, 1fr);
+  gap: 5rem;
+  margin: 1em 0 1em 1.5em;
 `
 const TechGridItem = styled.div`
-  grid-row: span;
-  place-self: center stretch;
+  position: relative;
+  width: 100%;
+
+  & :hover {
+    animation-play-state: paused;
+  }
 `
 const TechImage = styled.img`
-  animation: ${fadeInThenOut} linear 15s infinite;
+  animation: ${fadeInThenOut} linear 17s infinite;
   animation-delay: ${props => props.delay};
   opacity: 0;
   width: 1.85em;
@@ -51,7 +56,7 @@ const TechImage = styled.img`
 `
 const TechP = styled.p`
   ${techText}
-  animation: ${fadeOutThenIn} linear 15s infinite;
+  animation: ${fadeOutThenIn} linear 17s infinite;
   animation-delay: ${props => props.delay};
   color: white;
   opacity: 1;

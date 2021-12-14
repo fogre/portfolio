@@ -30,6 +30,10 @@ const Square = styled.div`
 `
 const Footer = styled.div`
   padding-bottom: 2em;
+
+  @media screen(max-width > 850) {
+    display: none;
+  }
 `
 const Link = styled.a.attrs(() => ({
   target: '_blank',
@@ -61,7 +65,7 @@ const SocialLinks = () => {
 
 const scrollIntoView = id => {
   document.getElementById(id).scrollIntoView({
-    behavior: 'smooth', block: 'center', inline: 'nearest'
+    behavior: 'smooth', block: 'start', inline: 'nearest'
   })
 }
 

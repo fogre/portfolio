@@ -1,11 +1,31 @@
 {
 	"projects": [
 		{
+			"name": "Shoppingify",
+			"desc": "Shopping list fullstack app done for devChallenges",
+			"url": "https://theshoppingifyapp.vercel.app",
+			"source": "https://github.com/fogre/shoppingify",
+			 "techs": [
+			   "NEXT",
+			   "TS",
+			   "GRAPHQL",
+			   "NODE"
+			 ]
+		},
+		{
+			"name": "CSS-for-JS-devs",
+			"desc": "CSS course for JS developers by Josh Comeau",
+			"url": "/cssCert.pdf",
+			"source": "https://css-for-js.dev/",
+			 "techs": [
+			   "CSS"
+			 ]
+		},
+		{
 			"name": "Portfolio",
 			"desc": "This website powered by Next and Threejs",
 			"source": "https://github.com/fogre/portfolio",
 			 "techs": [
-			   "REACT",
 			   "NEXT"
 			 ]
 		},
@@ -28,15 +48,6 @@
 			"techs": [
 				"NODE", "REACT"
 			]
-		},
-		{
-			"name": "Pysäkit",
-			"desc": "Helsinki region public transportation timetable searcher",
-			"url": "https://pysakit.netlify.app/",
-			"source": "https://github.com/fogre/pysakit-app",
-			 "techs": [
-			   "REACT"
-			 ]
 		},
 		{
 			"name": "Fullstack-open",
