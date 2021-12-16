@@ -7,8 +7,8 @@ const theme = {
   grey: '#b3b3b3',
   gradients: [
     'linear-gradient(107deg, rgba(49,63,166,1) 0%, rgba(162,121,201,1) 100%)',
-    'linear-gradient(107deg, rgba(162,121,201,1) 0%, rgba(105,32,138,1) 100%)',
-    'linear-gradient(107deg, rgba(105,32,138,1) 10%, rgba(101,115,215,1) 100%)'
+    'linear-gradient(107deg, rgba(162,121,201,1) 0%, rgba(150,77,184,1) 100%)',
+    'linear-gradient(107deg, rgba(150,77,184,1) 0%, rgba(101,115,215,1) 100%)'
   ]
 }
 

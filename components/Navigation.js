@@ -30,6 +30,8 @@ const Square = styled.div`
 `
 const Footer = styled.div`
   padding-bottom: 2em;
+  width: 100%;
+  text-align: center;
 
   @media screen(max-width > 850) {
     display: none;
@@ -98,9 +100,6 @@ const Navigation = ({ breakpoint, inView }) => {
       <NavBottom>
         <SocialLinks />
       </NavBottom>
-      <Footer>
-        <SocialLinks />
-      </Footer>
     </>
   )
 }

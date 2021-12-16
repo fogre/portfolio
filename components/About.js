@@ -32,15 +32,12 @@ const TechGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(${props => props.columns}, 1fr);
   gap: 5rem;
+  justify-content: center;
   margin: 1em 0 1em 1.5em;
 `
 const TechGridItem = styled.div`
   position: relative;
-  width: 100%;
-
-  & :hover {
-    animation-play-state: paused;
-  }
+  width: 200%;
 `
 const TechImage = styled.img`
   animation: ${fadeInThenOut} linear 17s infinite;
@@ -48,6 +45,7 @@ const TechImage = styled.img`
   opacity: 0;
   width: 1.85em;
   height: 1.85em;
+  margin-left: 25%;
 
   @media only screen and (max-width: 340px) {
     opacity: 1;
@@ -61,6 +59,9 @@ const TechP = styled.p`
   color: white;
   opacity: 1;
   margin-top: 0.4em;
+  text-align: center;
+  width: 200%;
+  left: -50%;
 
   @media only screen and (max-width: 340px) {
     opacity: 0;

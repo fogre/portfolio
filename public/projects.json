@@ -6,8 +6,8 @@
 			"url": "https://theshoppingifyapp.vercel.app",
 			"source": "https://github.com/fogre/shoppingify",
 			 "techs": [
-			   "NEXT",
 			   "TS",
+			   "NEXT",
 			   "GRAPHQL",
 			   "NODE"
 			 ]
@@ -46,19 +46,8 @@
 			"url": "https://authappdevchallenge.herokuapp.com/",
 			"source": "https://github.com/fogre/auth-app",
 			"techs": [
-				"NODE", "REACT"
+				"REACT", "NODE"
 			]
-		},
-		{
-			"name": "Fullstack-open",
-			"desc": "Assignments done for the 2020 full-stack open course",
-			"source": "https://github.com/fogre/fullstackopen",
-			 "techs": [
-			   "REACT",
-			   "NODE",
-			   "GRAPHQL",
-			   "REDUX"
-			 ]
 		}
 	],
 	"techs": {
