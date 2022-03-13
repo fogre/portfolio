@@ -1,6 +1,16 @@
 {
 	"projects": [
 		{
+			"name": "Chatgroup",
+			"desc": "Group chat app powered by Next.js and AWS Amplify",
+			"url": "https://main.d2ky15by9x4y7q.amplifyapp.com/",
+			"source": "https://github.com/fogre/chatgroup-app",
+			 "techs": [
+			   "NEXT",
+			   "AWS"
+			 ]
+		},
+		{
 			"name": "Shoppingify",
 			"desc": "Shopping list fullstack app done for devChallenges",
 			"url": "https://theshoppingifyapp.vercel.app",
@@ -39,15 +49,6 @@
 			   "REACT",
 			   "NODE"
 			 ]
-		},
-		{
-			"name": "Auth-App",
-			"desc": "User authentication API done for devChallenges",
-			"url": "https://authappdevchallenge.herokuapp.com/",
-			"source": "https://github.com/fogre/auth-app",
-			"techs": [
-				"REACT", "NODE"
-			]
 		}
 	],
 	"techs": {
@@ -65,7 +66,8 @@
 		"back": [
 			"NODE",
 			"GRAPHQL",
-			"MONGODB"
+			"MONGODB",
+			"AWS"
 		]
 	}
 }
