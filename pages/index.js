@@ -5,7 +5,11 @@ import HomeContent from '../components/HomeContent'
 
 const BackgroundWrapper = styled.div`
   background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  display: flex;
+  flex: 1 1 auto;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -20,7 +24,7 @@ const Home = ({ projects }) => {
 
   return (
     <>
-      <BackgroundWrapper>
+      <BackgroundWrapper id="canvas-container">
         <Background setLoaded={setLoaded}/>
       </BackgroundWrapper>
       <HomeContent projects={projects} loaded={loaded}/>
