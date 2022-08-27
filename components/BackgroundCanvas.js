@@ -106,6 +106,9 @@ export default memo(function BackgroundCanvas(props) {
       <a.group position-z={z.to(z => (-z / 1000) * 25)}>
         <Content />
       </a.group>
+      <a.group position-z={z.to(z => (-z / 1000) * 29)}>
+        <Content />
+      </a.group>
     </Canvas>
   )
 })

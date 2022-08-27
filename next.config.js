@@ -3,7 +3,9 @@ const { createSecureHeaders } = require('next-secure-headers')
 const CSPdirectives = {
   defaultSrc: "'self'",
   styleSrc: ["'self'", "'unsafe-inline'"],
-  scriptSrc: ["'self'", "'unsafe-eval'"],
+  scriptSrc: process.env.NODE_ENV === 'development' 
+    ? ["'self'", "'unsafe-eval'"]
+    : ["'self'"],
   fontSrc: "'self'",
   imgSrc: "'self'",
   baseUri: "self",
