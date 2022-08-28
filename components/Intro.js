@@ -21,7 +21,7 @@ const Intro = () => {
   return (
     <IntroContainer>
       <InnerWrapper>
-        <img src={'./img/logo2.svg'} alt='Antti Kotiranta'/>
+        <img src={'./img/logo21.svg'} alt='Antti Kotiranta'/>
       </InnerWrapper>
     </IntroContainer>
   )
