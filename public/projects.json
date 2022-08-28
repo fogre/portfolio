@@ -19,7 +19,17 @@
 			   "TS",
 			   "NEXT",
 			   "GRAPHQL",
-			   "NODE"
+			   "EXPRESS"
+			 ]
+		},
+		{
+			"name": "Vue + Postgres",
+			"desc": "Practice app to learn Vue & Postgres (Sequelize)",
+			"source": "https://github.com/fogre/vue-sequelizer-postgres",
+			 "techs": [
+			   "VUE",
+			   "POSTGRES",
+			   "EXPRESS"
 			 ]
 		},
 		{
@@ -38,36 +48,30 @@
 			 "techs": [
 			   "NEXT"
 			 ]
-		},
-		{
-			"name": "TypeScript",
-			"desc": "Full-stack open TypeScript exercises",
-			"url": "https://patientortypesciptapp.netlify.app/",
-			"source": "https://github.com/fogre/TypeScript",
-			 "techs": [
-			   "TS",
-			   "REACT",
-			   "NODE"
-			 ]
 		}
 	],
 	"techs": {
-		"basics": [
-			"HTML",
-			"CSS",
-			"JS",
-			"TS"
+		"Languages": [
+			{ "name": "JS", "val": 8 },
+			{ "name": "TS", "val": 3 }
 		],
-		"front": [		
-			"REACT",
-			"REDUX",
-			"NEXT"
+		"Front-End": [		
+			{ "name": "REACT", "val": 8 },
+			{ "name": "NEXT", "val": 7 },
+			{ "name": "VUE", "val": 5 }
 		],
-		"back": [
-			"NODE",
-			"GRAPHQL",
-			"MONGODB",
-			"AWS"
+		"Back-End": [
+			{ "name": "EXPRESS", "val": 7 },
+			{ "name": "REST", "val": 7 },
+			{ "name": "GRAPHQL", "val": 5 }
+		],
+		"Databases": [
+			{ "name": "MONGODB", "val": 5 },
+			{ "name": "POSTGRES", "val": 5 }
+		],
+		"Cloud": [
+			{ "name": "AWS", "val": 3 },
+			{ "name": "DOCKER", "val": 3 }
 		]
 	}
 }

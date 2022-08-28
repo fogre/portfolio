@@ -1,11 +1,11 @@
-import { memo, useRef, useEffect } from 'react'
-import { Canvas, useFrame, useThree } from 'react-three-fiber'
+import { memo, useRef, useEffect, useState, useLayoutEffect } from 'react'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { a } from '@react-spring/three'
 import ScrollEffect from '../utils/ScrollEffect'
 
 function Square(props) {
   return (
-    <mesh {...props} scale={[0.5, 0.5, 0.5]}>
+    <mesh {...props} scale={0.5}>
       <ringBufferGeometry attach="geometry" args={[8.9, 9, 4]} />
       <meshStandardMaterial
         attach="material"
@@ -45,14 +45,19 @@ function Content() {
 function Camera(props) {
   const cameraRef = useRef()
   const loadedRef = useRef()
-  const { setDefaultCamera } = useThree()
-  useEffect(() => void setDefaultCamera(cameraRef.current), [])
+  const { set, viewport } = useThree()
+  useEffect(() => void set({ camera: cameraRef.current }), [])
+
+  useLayoutEffect(() => {
+    cameraRef.current.aspect = viewport.width / viewport.height
+    cameraRef.current.updateProjectionMatrix()
+  }, [viewport])
 
   useFrame(({ clock }) => {
     if (loadedRef.current) {
       cameraRef.current.updateMatrixWorld()
     } else if (cameraRef.current.position.z < 74.99 && !loadedRef.current) {
-      cameraRef.current.position.z = 0 + Math.sin(clock.getElapsedTime())* 75
+      cameraRef.current.position.z = 0 + Math.sin(clock.getElapsedTime()) * 75
     } else {
       loadedRef.current = true
       props.setLoaded()
@@ -70,26 +75,38 @@ function CameraLight() {
       width={5}
       height={5}
       color={'#000069'}
-      intensity={670}
+      intensity={470}
       position={camera.position}
     />
   )
 }
 
 export default memo(function BackgroundCanvas(props) {
-  const clientWindow = typeof window !== 'undefined'
-    ? window
-    : null
+  const [isClient, setIsClient] = useState(false)
 
-  const height = clientWindow && clientWindow.innerHeight * -3
-  const [z] = ScrollEffect([height, 40], { domTarget: clientWindow })
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsClient(true)
+    }
+  }, [])
+
+  const height = isClient && window.innerHeight * -3
+  const [z] = ScrollEffect([height, 0], { target: isClient ? window : null })
+
+  if (!isClient) return null
 
   return (
-    <Canvas style={{ height: '100vh', width: '100%' }}>
-      <Camera position={[0.5, -0.5, 0]} setLoaded={props.setLoaded}>
+    <Canvas style={{ width: '100%', height: '100%' }}>
+      <Camera
+        position={[0.5, 0.5, 0]}
+        setLoaded={props.setLoaded}
+      >
         <CameraLight />
       </Camera>
       <a.group position-z={z.to(z => (-z / 1000) * 25)}>
+        <Content />
+      </a.group>
+      <a.group position-z={z.to(z => (-z / 1000) * 29)}>
         <Content />
       </a.group>
     </Canvas>

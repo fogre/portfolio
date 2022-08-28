@@ -1,6 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+
   body {
     background: #1a2135;
     box-sizing: border-box;
@@ -18,6 +23,12 @@ export const GlobalStyle = createGlobalStyle`
       0.5px 0.5px 0 #1a2135,
       0.5px -0.5px 0 #1a2135,
       -0.5px -0.5px 0 #1a2135;
+  }
+
+  #__next {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
   }
 
   p {
