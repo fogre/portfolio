@@ -7,7 +7,6 @@ const AboutContainer = styled.div`
     line-height: 1.2;
   }
 `
-
 const TextWrapper = styled.div`
   max-width: 450px;
 `
@@ -70,23 +69,23 @@ const TechP = styled.p`
 `
 
 const Techs = ({ breakpoint, techs, i }) => {
-  const delay = (i*300).toString()+'ms'
+  const delay = `${i*300}ms`
   return (
     <FlexWrapper>
       <Square
-        width={breakpoint ? '7px' : (7-i).toString()+'em'}
+        width={breakpoint ? '30px' : `${10-i}em`}
         height={'6px'}
-        i={breakpoint ? 0 : i}
+        i={breakpoint ? 2 : i}
       />
       <TechGrid columns={techs.length}>
         {techs.map((tech, i) =>
           <TechGridItem key={i}>
             <TechP delay={delay}>
-              {tech}
+              {tech.name}
             </TechP>
             <TechImage
-              src={`./img/${tech}.png`}
-              alt={tech}
+              src={`./img/${tech.name}.png`}
+              alt={tech.name}
               delay={delay}
             />
           </TechGridItem>
@@ -101,10 +100,10 @@ const About = ({ breakpoint, techs }) => {
     <AboutContainer>
       <TextWrapper>
         <Bold>
-          I&apos;m a self learned full-stack developer.
+          I&apos;m a self driven JS full stack developer.
         </Bold>
         <Small>
-          Student of computer science in the University of Helsinki.
+          Former student of computer science in the University of Helsinki.
         </Small>
         <Small>
            Interested in creating functional and engaging web projects.
@@ -115,7 +114,7 @@ const About = ({ breakpoint, techs }) => {
         </Small>
       </TextWrapper>
       <br/>
-      <h4>Working happily with...</h4>
+      <h4>So far worked with...</h4>
       {Object.values(techs).map((tech, i) =>
         <Techs
           key={i}

@@ -57,7 +57,6 @@ const LinkButton = styled.a.attrs(() => ({
 `
 const Project = ({ project, i }) => {
   const techTexts = project.techs.map(tech => tech+'   ')
-
   return (
     <ProjectContainer>
       <FlexWrapper>

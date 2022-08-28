@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { flexCenter, paddingBorder } from '../styles/mixins'
-import logo from '../public/img/logo.svg'
 
 const IntroContainer = styled.div`
   ${flexCenter};
@@ -13,8 +12,8 @@ const InnerWrapper = styled.div`
   height: 50vh;
 
   img {
-    max-width: 90vw;
-    width: 35em;
+    max-width: 80vw;
+    width: 22rem;
   }
 `
 
@@ -22,7 +21,7 @@ const Intro = () => {
   return (
     <IntroContainer>
       <InnerWrapper>
-        <img src={logo} alt='Antti Kotiranta'/>
+        <img src={'./img/logo2.svg'} alt='Antti Kotiranta'/>
       </InnerWrapper>
     </IntroContainer>
   )

@@ -25,6 +25,12 @@ export const GlobalStyle = createGlobalStyle`
       -0.5px -0.5px 0 #1a2135;
   }
 
+  #__next {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+  }
+
   p {
     font-size: 1.30em;
   }

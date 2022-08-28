@@ -96,7 +96,7 @@ export default memo(function BackgroundCanvas(props) {
   if (!isClient) return null
 
   return (
-    <Canvas>
+    <Canvas style={{ width: '100%', height: '100%' }}>
       <Camera
         position={[0.5, 0.5, 0]}
         setLoaded={props.setLoaded}
