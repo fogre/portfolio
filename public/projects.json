@@ -1,6 +1,16 @@
 {
 	"projects": [
 		{
+			"name": "iKnowLayouts",
+			"desc": "Just sites I use to have fun with web layouts",
+			"url": "https://i-know-layouts.vercel.app/",
+			"source": "https://github.com/fogre/iKnowLayouts",
+			 "techs": [
+			   "NEXT",
+			   "CSS"
+			 ]
+		},
+		{
 			"name": "Chatgroup",
 			"desc": "Group chat app powered by Next.js and AWS Amplify",
 			"url": "https://main.d2ky15by9x4y7q.amplifyapp.com/",
@@ -39,14 +49,6 @@
 			"source": "https://css-for-js.dev/",
 			 "techs": [
 			   "CSS"
-			 ]
-		},
-		{
-			"name": "Portfolio",
-			"desc": "This website powered by Next and Threejs",
-			"source": "https://github.com/fogre/portfolio",
-			 "techs": [
-			   "NEXT"
 			 ]
 		}
 	],
