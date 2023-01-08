@@ -13,7 +13,6 @@
 		{
 			"name": "Chatgroup",
 			"desc": "Group chat app powered by Next.js and AWS Amplify",
-			"url": "https://main.d2ky15by9x4y7q.amplifyapp.com/",
 			"source": "https://github.com/fogre/chatgroup-app",
 			 "techs": [
 			   "NEXT",
@@ -23,7 +22,6 @@
 		{
 			"name": "Shoppingify",
 			"desc": "Shopping list fullstack app done for devChallenges",
-			"url": "https://theshoppingifyapp.vercel.app",
 			"source": "https://github.com/fogre/shoppingify",
 			 "techs": [
 			   "TS",
